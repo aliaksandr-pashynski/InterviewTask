@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.1'
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.3'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.35'
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.35'
+    implementation group: 'io.rest-assured', name: 'json-schema-validator', version: '4.5.0'
+}
+
+test {
+    useTestNG()
+}
