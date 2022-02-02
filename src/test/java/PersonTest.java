@@ -1,6 +1,6 @@
-import app.BaseTest;
-import app.core.ResponseDetails;
-import app.entities.Person;
+import com.example.common.BaseTest;
+import com.example.utils.ResponseDetails;
+import com.example.entities.Person;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;

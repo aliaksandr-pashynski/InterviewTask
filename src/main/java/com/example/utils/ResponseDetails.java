@@ -1,4 +1,4 @@
-package app.core;
+package com.example.utils;
 
 public class ResponseDetails<T> {
 

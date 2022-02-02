@@ -1,4 +1,4 @@
-package app.entities;
+package com.example.entities;
 
 public class Person {
 

@@ -1,4 +1,4 @@
-package app.json;
+package com.example.json;
 
 public interface JsonMapper {
 

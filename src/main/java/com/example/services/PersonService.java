@@ -1,9 +1,10 @@
-package app.core;
+package com.example.services;
 
-import app.entities.Person;
-import app.json.JacksonMapper;
-import app.json.JsonMapper;
-import app.utils.LoggingInterceptor;
+import com.example.entities.Person;
+import com.example.json.JacksonMapper;
+import com.example.json.JsonMapper;
+import com.example.utils.LoggingInterceptor;
+import com.example.utils.ResponseDetails;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -39,7 +40,7 @@ public class PersonService implements EntityService<Person> {
     }
 
     @Override
-    public ResponseDetails<List<Person>> getAll(List<String> names) throws IOException {
+    public ResponseDetails<List<Person>> getAll(List<String> names) throws Exception {
         HttpUrl.Builder builder = urlBuilder.get();
         for (String name : names) {
             builder.addQueryParameter("name", name);

@@ -1,4 +1,4 @@
-package app.utils;
+package com.example.utils;
 
 import okhttp3.Interceptor;
 import okhttp3.Request;
@@ -13,7 +13,8 @@ public class LoggingInterceptor implements Interceptor {
 
     private static final Logger logger = LoggerFactory.getLogger(LoggingInterceptor.class);
 
-    @Override public Response intercept(Chain chain) throws IOException {
+    @Override
+    public Response intercept(Chain chain) throws IOException {
         Request request = chain.request();
         logger.info(String.format("Sending %s request to %s", request.method(), request.url()));
         Response response = chain.proceed(request);

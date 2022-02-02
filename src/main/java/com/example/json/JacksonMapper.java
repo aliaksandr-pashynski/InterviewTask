@@ -1,4 +1,4 @@
-package app.json;
+package com.example.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 public class JacksonMapper implements JsonMapper {
 
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
     private static final Logger logger = LoggerFactory.getLogger(JacksonMapper.class);
 
     public JacksonMapper() {
