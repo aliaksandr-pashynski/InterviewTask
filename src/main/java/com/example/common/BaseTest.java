@@ -6,5 +6,5 @@ import com.example.entities.Person;
 
 public class BaseTest {
 
-    protected EntityService<Person> personService = new PersonService("api.agify.io");
+    protected EntityService<Person> personService = new PersonService();
 }

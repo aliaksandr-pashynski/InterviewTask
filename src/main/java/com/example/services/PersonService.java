@@ -15,18 +15,20 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
 
+import static com.example.common.Constants.BASE_URL;
+
 public class PersonService implements EntityService<Person> {
 
     private final OkHttpClient client;
     private final Supplier<HttpUrl.Builder> urlBuilder;
     private final JsonMapper jsonMapper = new JacksonMapper();
 
-    public PersonService(String baseUri) {
+    public PersonService() {
         this.client = new OkHttpClient()
                 .newBuilder()
                 .addInterceptor(new LoggingInterceptor())
                 .build();
-        this.urlBuilder = () -> new HttpUrl.Builder().scheme("https").host(baseUri);
+        this.urlBuilder = () -> new HttpUrl.Builder().scheme("https").host(BASE_URL);
     }
 
     @Override
